@@ -1,0 +1,28 @@
+name = "ada_game"
+description = "Example of SDLAda."
+version = "0.1.0-dev"
+
+authors = ["Luke A. Guest"]
+maintainers = ["Luke A. Guest <laguest@archeia.com>"]
+maintainers-logins = ["Lucretia"]
+licenses = "Zlib"
+website = ""
+tags = ["ada", "gamedev", "sdl2"]
+
+executables = ["ada_game"]
+
+[build-profiles]
+  "*" = "development"
+
+[[depends-on]]
+  sdlada       = "*"
+  sdlada_mixer = "*"
+  sdlada_image = "*"
+  sdlada_ttf   = "*"
+
+[[pins]]
+  sdlada       = { url = "git@github.com:ada-game-framework/sdlada.git" }
+  # sdlada       = { path = "../../sdl/sdlada" }
+  sdlada_mixer = { url = "git@github.com:ada-game-framework/sdlada_mixer.git" }
+  sdlada_image = { url = "git@github.com:ada-game-framework/sdlada_image.git" }
+  sdlada_ttf   = { url = "git@github.com:ada-game-framework/sdlada_ttf.git" }
