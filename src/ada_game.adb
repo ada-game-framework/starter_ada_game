@@ -108,7 +108,7 @@ begin
          Time_To_Wait := Timers.Milliseconds_Long (Frame_Target_Time) - (Timers.Ticks - Last_Frame_Time);
 
          --  Delay if running too fast.
-         if Time_To_Wait > 0 and then Float (Time_To_Wait) <= Frame_Target_Time then
+         if Time_To_Wait > 0 and then Time_To_Wait <= Timers.Milliseconds_Long (Frame_Target_Time) then
             Timers.Wait_Delay (Time_To_Wait);
          end if;
 
